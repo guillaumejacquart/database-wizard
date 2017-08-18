@@ -1,0 +1,3 @@
+export const SET_STRUCTURE = 'SET_STRUCTURE';
+export const SET_SCALABILITY = 'SET_SCALABILITY';
+export const SET_VOLUME = 'SET_VOLUME';
