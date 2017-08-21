@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { persistStore, autoRehydrate } from 'redux-persist'
 import { ApolloClient, ApolloProvider,createNetworkInterface } from 'react-apollo';
 
 import './index.css';
@@ -24,10 +25,13 @@ const store = createStore(
   {}, // initial state
   compose(
       applyMiddleware(client.middleware()),
+      autoRehydrate(),
       // If you are using the devToolsExtension, you can add it here also
       (typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined') ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
   )
 );
+
+persistStore(store);
 
 ReactDOM.render(
 <ApolloProvider store={store} client={client}>

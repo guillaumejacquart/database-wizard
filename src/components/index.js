@@ -1,13 +1,13 @@
-import StructureForm from './StructureForm';
-import ScalabilityForm from './ScalabilityForm';
-import VolumeForm from './VolumeForm';
+import DataForm from './DataForm';
+import QueryForm from './QueryForm';
+import OtherForm from './OtherForm';
 import ValidateWizard from './ValidateWizard';
 import Summary from './Summary';
 
 export {
-    StructureForm,
-    ScalabilityForm,
-    VolumeForm,
+    DataForm,
+    QueryForm,
+    OtherForm,
     ValidateWizard,
     Summary
 }
